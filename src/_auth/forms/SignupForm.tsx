@@ -40,7 +40,7 @@ const { mutateAsync: signInAccount, isPending: isSigningIn } = useSignInAccount(
     const newUser = await createUserAccount(values)
     if(!newUser)
     {
-      return(toast({ title: 'Sign up failed. Please try again later'}));
+      return(toast({ title: 'Sign up failed. Please try again later'}) );
     }
     const session = await signInAccount({
       email: values.email,
